@@ -4,6 +4,17 @@
 import React from 'react';
 
 function Greeting() {
-    return <p>Welcome to the world of React!</p>;
+
+    // Adding some inline styling 
+    const greetingStyle = {
+    color: "blue",
+    backgroundColor: "lightblue",
+    padding: "10px",
+    fontFamily: "Arial",
+    textAlign: "center"
+    };
+
+    // Adding the inline styling to the paragraph tag 
+    return <p style={greetingStyle}>Welcome to the world of React!</p>;
 }
 export default Greeting;
