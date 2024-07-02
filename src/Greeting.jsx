@@ -2,6 +2,7 @@
 // A functional component that returns a paragraph element with a welcome message.
 
 import React from 'react';
+import styles from './Greeting.module.css';
 
 function Greeting() {
 
@@ -15,6 +16,7 @@ function Greeting() {
     };
 
     // Adding the inline styling to the paragraph tag 
-    return <p style={greetingStyle}>Welcome to the world of React!</p>;
+    // return <p style={greetingStyle}>Welcome to the world of React!</p>;
+    return <p className={styles.greeting}>Welcome to the world of React!</p>;
 }
 export default Greeting;

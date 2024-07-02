@@ -1,0 +1,9 @@
+
+/* Making a few modifications so we can tell the difference */
+.greeting {
+  color: pink;
+  background-color: darkred;
+  padding: 10px;
+  font-family: Arial;
+  text-align: center;
+}
