@@ -1,0 +1,9 @@
+/* Let's move our inline styling into the styles.css */
+
+.greeting {
+  color: blue;
+  background-color: lightblue;
+  padding: 10px;
+  font-family: Arial;
+  text-align: center;
+}
