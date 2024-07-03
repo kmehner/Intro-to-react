@@ -7,7 +7,9 @@ function App() {
     <div>
       <h1>Hello, World!</h1>
       <Greeting />
-      <ClassGreeting />
+
+      {/* Passing through the prop (property) */}
+      <ClassGreeting initialName='Johnn Doe'/>
     </div>
   );
 }
