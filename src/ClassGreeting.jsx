@@ -7,10 +7,11 @@ class ClassGreeting extends Component {
     constructor(props){
       super(props);
 
-      // Setting the State
       this.state = {
+        users: ["Alice", "Bob", "Charlie"],
         name: this.props.initialName,
-      };
+        isLoggedIn: false,
+    };
 
       this.toggleLogin = this.toggleLogin.bind(this);
     }
@@ -22,10 +23,11 @@ class ClassGreeting extends Component {
     }
  
     render() {
-      const { name, isLoggedIn } = this.state;
+      const { users, name, isLoggedIn } = this.state;
 
       return (
           <div>
+
               <p className="greeting">
                   {isLoggedIn ? `Hello, ${name}! Welcome back!` : this.props.customMessage}
               </p>
@@ -34,10 +36,20 @@ class ClassGreeting extends Component {
               ) : (
                   <button onClick={this.toggleLogin}>Log Out</button>
               )}
+
+              <p className="greeting">
+                  {this.props.customUserMessage}
+              </p>
+              <ul>
+                  {users.map((user, index) => (
+                      <li key={index}>{user}</li>
+                  ))}
+              </ul>
+
           </div>
       );
   }
-  
+
 }
 
 ClassGreeting.defaultProps = {
