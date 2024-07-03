@@ -7,15 +7,36 @@ import styles from './Greeting.module.css';
 function Greeting(props) {
     const [name, setName] = useState(props.initialName)
 
+    // Logged in State
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    // Event handlers
+    const handleLoginClick = () => {
+        setIsLoggedIn(true); 
+    }
+
+    const handleLogoutClick = () => {
+        setIsLoggedIn(false);;
+        setName(props.initialName) // Reset the name to the initial name
+    }
+
     const changeName = () => {
         setName('Jane Doe')
     }
 
     return (
         <div>
-            <h2 className={styles.greeting}>{props.customMessage}, {name}!</h2>
-            <button onClick={changeName}>Change Name</button>
-        </div> 
+            <p className={styles.greeting}>
+								{isLoggedIn ? `Hello, ${name}! Welcome back!` : props.customMessage}
+            </p>
+
+            {/* Buttons that are conditionally rendered */}
+            {!isLoggedIn ? (
+                <button onClick={handleLoginClick}>Log In</button>
+            ) : (
+                <button onClick={handleLogoutClick}>Log Out</button>
+            )}
+        </div>
     )
 }
 
