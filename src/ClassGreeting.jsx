@@ -35,7 +35,7 @@ class ClassGreeting extends Component {
 
       return (
         <div>
-          <h2>Hello, {name}! This is a class-based greeting</h2>
+          <h2>{this.props.customMessage}, {this.state.name}!</h2>
 
           {/* Setting up an event listener on the button so when the button is clicked, the changeName method is called, triggering a state update */}
           <button onClick={this.changeName}>Change Name</button>

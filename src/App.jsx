@@ -3,13 +3,16 @@ import Greeting from "./Greeting";
 import ClassGreeting from "./ClassGreeting";
 
 function App() {
+  const customMessage = "Welcome to my React app";
+
   return (
     <div>
       <h1>Hello, World!</h1>
 
-      <Greeting initialName="Johnny Doe"/>
+      <Greeting customMessage={customMessage}/>
 
-      <ClassGreeting initialName='Johnn Doe'/>
+      <ClassGreeting customMessage={customMessage} />
+
     </div>
   );
 }

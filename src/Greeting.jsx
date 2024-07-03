@@ -13,7 +13,7 @@ function Greeting(props) {
 
     return (
         <div>
-            <h2 className={styles.greeting}>Welcome, {name}! This is a functional component greeting</h2>
+            <h2 className={styles.greeting}>{props.customMessage}, {name}!</h2>
             <button onClick={changeName}>Change Name</button>
         </div> 
     )
