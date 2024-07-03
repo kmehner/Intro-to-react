@@ -44,4 +44,9 @@ class ClassGreeting extends Component {
       
     }
 }
+
+ClassGreeting.defaultProps = {
+  initialName: 'John Doe',
+};
+
 export default ClassGreeting;

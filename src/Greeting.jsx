@@ -18,6 +18,11 @@ function Greeting(props) {
         </div> 
     )
 }
+
+Greeting.defaultProps = {   
+    initialName: 'John Doe',
+};
+
 export default Greeting;
 
 // function Greeting() {
